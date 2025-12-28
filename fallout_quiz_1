@@ -1,0 +1,24 @@
+def run_quiz():
+    # Dictionary of Fallout 2 specific questions and answers
+    questions = {
+        "What is the name of the village where the game starts?": "arroyo",
+        "What item does the Elder send you to find?": "geck",
+        "Who is the final boss of the game?": "frank horrigan",
+        "What does G.E.C.K. stand for? (Garden of Eden ____ Kit)": "creation"
+    }
+
+    score = 0
+    print("--- ☢️ Welcome to the Fallout 2 Wasteland Quiz! ☢️ ---")
+
+    for question, answer in questions.items():
+        user_answer = input(f"{question} ").lower().strip()
+        if user_answer == answer:
+            print("Correct! +1 Karma ✅")
+            score += 1
+        else:
+            print(f"Wrong. The wasteland is harsh. The answer was {answer}. ❌")
+
+    print(f"\nGame Over! Your final score is {score}/{len(questions)}.")
+
+if __name__ == "__main__":
+    run_quiz()
